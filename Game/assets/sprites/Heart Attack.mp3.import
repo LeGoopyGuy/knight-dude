@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cwfko5xo0bkb1"
+path="res://.godot/imported/Heart Attack.mp3-651d9b514e69399e02d83f1ebfc118fe.mp3str"
+
+[deps]
+
+source_file="res://assets/sprites/Heart Attack.mp3"
+dest_files=["res://.godot/imported/Heart Attack.mp3-651d9b514e69399e02d83f1ebfc118fe.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
