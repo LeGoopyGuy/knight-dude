@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/killzone.gd" id="1_nxbcg"]
 [ext_resource type="AudioStream" uid="uid://d2hgsd3oxmwef" path="res://assets/sounds/hurt.wav" id="2_3ufhe"]
 
-[node name="killzone" type="Area2D"]
+[node name="killzone2" type="Area2D"]
 collision_mask = 2
 script = ExtResource("1_nxbcg")
 

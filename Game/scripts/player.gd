@@ -7,26 +7,34 @@ const ACCEL = 20.0
 const FRICTION = 15.0
 const DASH_SPEED = 500.0
 const MAX_STAM = 100.0
-const DASH_COST = 56.9 + PI #for dino 
+const DASH_COST = 56.9 + PI #blame dino#
+const D_JUMP_NUM = 1
+const HP = 100
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var jump = $Jump
 
-var stamina = MAX_STAM
 
- 
+
+var stamina = MAX_STAM
+var d_jump = D_JUMP_NUM
+var hp = HP
 
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
-
+	
+	if hp == 0 :
+		get_tree(). reload_current_scene()
+	
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		jump.play()
+		
 		
 	if stamina < MAX_STAM:
 		stamina += 1
@@ -42,11 +50,15 @@ func _physics_process(delta):
 		if stamina - DASH_COST >= 0:
 			velocity.x = DASH_SPEED * direction
 			stamina -= DASH_COST
-		
-		
+	
+	if not is_on_floor() and Input.is_action_just_pressed("jump") and d_jump >= 1:
+		velocity.y = JUMP_VELOCITY
+		jump.play()
+		d_jump -= 1
 	
 	
 	if is_on_floor():
+		d_jump = D_JUMP_NUM
 		if direction == 0:
 			animated_sprite.play("idle")
 		else:
