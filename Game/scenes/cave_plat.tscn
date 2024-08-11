@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b42gjjolxc4gb"]
+
+[ext_resource type="Texture2D" uid="uid://bohhq5y4cqqt3" path="res://assets/sprites/cave-platformer-tileset-16x16.png" id="1_ewyvb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8uovr"]
+size = Vector2(42, 10)
+
+[node name="Cave Plat" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.854167, 1)
+texture = ExtResource("1_ewyvb")
+region_enabled = true
+region_rect = Rect2(0, 7, 48, 9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8uovr")
+one_way_collision = true

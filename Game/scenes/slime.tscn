@@ -50,7 +50,6 @@ script = ExtResource("1_obcpi")
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_6seeq")
 autoplay = "default"
-frame_progress = 0.0810853
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
 position = Vector2(0, -6)

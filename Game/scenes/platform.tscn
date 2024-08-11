@@ -6,6 +6,7 @@
 size = Vector2(32, 9)
 
 [node name="platform" type="AnimatableBody2D"]
+position = Vector2(0, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_twu3v")
@@ -13,6 +14,5 @@ region_enabled = true
 region_rect = Rect2(15.9712, 0, 32.4856, 9.43133)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_wb265")
 one_way_collision = true

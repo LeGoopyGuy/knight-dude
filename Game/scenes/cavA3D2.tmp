@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ce1bdmi3xs7ei"]
+
+[ext_resource type="Texture2D" uid="uid://brsvhwio8jfis" path="res://assets/sprites/gate.png" id="2_si8rs"]
+
+[node name="gate3" type="StaticBody2D"]
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_si8rs")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://xgo8tms032qt"]
+
+[ext_resource type="Texture2D" uid="uid://brsvhwio8jfis" path="res://assets/sprites/gate.png" id="1_ci3fn"]
+
+[node name="door_tut" type="Area2D"]
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ci3fn")

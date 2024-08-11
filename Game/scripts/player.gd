@@ -21,14 +21,15 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var stamina = MAX_STAM
 var d_jump = D_JUMP_NUM
 var hp = HP
+func _process(delta):
+	if hp == 0 :
+		get_tree(). reload_current_scene()
 
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	
-	if hp == 0 :
-		get_tree(). reload_current_scene()
 	
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():

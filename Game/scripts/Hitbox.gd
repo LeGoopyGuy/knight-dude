@@ -5,9 +5,11 @@ extends Area2D
 
 
 
+
+
 func _on_body_entered(player):
 	player.hp -= 25
-	player.animated_sprite.play("hurt")
+	hurt.play()
 
 func _on_timer_timeout():
 	Engine.time_scale = 1

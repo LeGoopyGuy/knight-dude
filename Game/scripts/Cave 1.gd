@@ -4,6 +4,7 @@ var keys = 0
 var score = 0
 @onready var score_label = $Score_Label
 @onready var button = $"../CanvasLayer/Button"
+@onready var score_first = $"score first"
 
 
 
@@ -21,10 +22,9 @@ func change_scene():
 
 func add_point():
 	score += 1
-	if score == 9:
-		score_label.text = "Congrats! Get the key and beat the level!"
-	else:
-		score_label.text = "You collected " + str(score) + "/9 coins! get all 9 to get the key!"
+	score_label.text = "You collected " + str(score) + "/18 coins!"
+	
+	score_first.text = "You collected " + str(score) + "/12 coins!"
 	
 func add_keys():
 	keys += 1

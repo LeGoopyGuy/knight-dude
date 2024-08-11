@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj45q76fhpklk"]
+
+[ext_resource type="Texture2D" uid="uid://brsvhwio8jfis" path="res://assets/sprites/gate.png" id="1_qvkah"]
+
+[node name="door_cave" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qvkah")
